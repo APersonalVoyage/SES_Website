@@ -75,6 +75,9 @@ section {
     min-height: 100vh;
     padding: var(--spacing-xl) var(--spacing-md);
     page-break-after: always;
+    position: relative;
+    clear: both;
+    display: block;
 }
 
 .content-container {
@@ -171,6 +174,7 @@ section {
     font-size: 1.1rem;
     font-weight: 400;
     margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
     opacity: 0.9;
     letter-spacing: 0.5px;
 }
@@ -181,7 +185,9 @@ section {
 
 .image-gallery-page {
     background-color: #f8f9fa;
-    padding: var(--spacing-xl);
+    padding: var(--spacing-xl) var(--spacing-md);
+    margin-top: 0;
+    clear: both;
 }
 
 .gallery-grid {
@@ -201,6 +207,8 @@ section {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
     background: var(--white);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    position: relative;
 }
 
 .gallery-item:hover {
