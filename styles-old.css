@@ -1,0 +1,910 @@
+/* ===================================
+   PROFESSIONAL CORPORATE DESIGN
+   Shri Engineering and Steel
+   Clean, Readable, Authentic
+   =================================== */
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Professional Color Palette - Corporate Blue & Orange */
+    --primary-blue: #1a3a5c;
+    --secondary-blue: #2c5f8d;
+    --accent-orange: #e67e22;
+    --dark-gray: #2c3e50;
+    --medium-gray: #7f8c8d;
+    --light-gray: #ecf0f1;
+    --white: #ffffff;
+    --text-dark: #333333;
+    --text-light: #666666;
+    --border-color: #ddd;
+
+    /* Typography - Professional and Readable */
+    --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 3rem;
+    --spacing-xl: 4rem;
+}
+
+body {
+    font-family: var(--font-main);
+    line-height: 1.8;
+    color: var(--text-dark);
+    background-color: var(--white);
+    font-size: 17px;
+    overflow-x: hidden;
+}
+
+/* Improved Typography for Readability */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-main);
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--primary-blue);
+    margin-bottom: var(--spacing-sm);
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.3rem; }
+
+p {
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: var(--text-dark);
+}
+
+strong {
+    font-weight: 600;
+    color: var(--primary-blue);
+}
+
+/* Section Layouts */
+section {
+    min-height: 100vh;
+    padding: var(--spacing-xl) var(--spacing-md);
+    page-break-after: always;
+    position: relative;
+    clear: both;
+    display: block;
+}
+
+.content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-md);
+}
+
+/* ===================================
+   COVER PAGE - Clean & Professional
+   =================================== */
+
+.cover-page {
+    background: var(--primary-blue);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    padding: var(--spacing-xl) var(--spacing-md);
+    overflow: hidden;
+}
+
+.cover-gradient {
+    width: 100%;
+    max-width: 1400px;
+}
+
+.cover-content {
+    padding: var(--spacing-lg);
+    width: 100%;
+    max-width: 100%;
+}
+
+.tagline {
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    margin-bottom: var(--spacing-lg);
+    color: var(--white);
+    opacity: 0.95;
+    line-height: 1.6;
+}
+
+.logo-section {
+    margin: var(--spacing-xl) 0;
+}
+
+.company-name {
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--white);
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.company-name .and {
+    font-size: 2.5rem;
+    font-weight: 400;
+    display: inline-block;
+    margin: 0 0.5rem;
+}
+
+.cover-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-lg);
+    margin: var(--spacing-xl) auto;
+    flex-wrap: wrap;
+    max-width: 1200px;
+}
+
+.cover-image-item {
+    width: 240px;
+    height: 240px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    flex-shrink: 0;
+}
+
+.cover-image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cover-subtitle {
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+    opacity: 0.9;
+    letter-spacing: 0.5px;
+}
+
+/* ===================================
+   IMAGE GALLERY - Clean Grid
+   =================================== */
+
+.image-gallery-page {
+    background-color: #f8f9fa;
+    padding: var(--spacing-xl) var(--spacing-md);
+    margin-top: 0;
+    clear: both;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: var(--spacing-md);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.gallery-item {
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+    background: var(--white);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    position: relative;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.gallery-item.large {
+    grid-column: span 2;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-item.large img {
+    height: 380px;
+}
+
+/* ===================================
+   PAGE HEADER - Professional
+   =================================== */
+
+.page-header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 2px solid var(--accent-orange);
+}
+
+.logo-small h2 {
+    color: var(--primary-blue);
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: var(--primary-blue);
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+    font-weight: 700;
+    line-height: 1.3;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ===================================
+   ABOUT PAGE - Clean & Readable
+   =================================== */
+
+.about-page {
+    background-color: var(--white);
+}
+
+.about-content {
+    max-width: 900px;
+    margin: 0 auto var(--spacing-lg);
+    background: #f8f9fa;
+    padding: var(--spacing-lg);
+    border-radius: 6px;
+    border-left: 4px solid var(--accent-orange);
+}
+
+.intro-text {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: var(--text-dark);
+    text-align: left;
+    margin-bottom: var(--spacing-md);
+}
+
+.feature-image {
+    max-width: 800px;
+    margin: var(--spacing-lg) auto;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    border: 1px solid var(--border-color);
+}
+
+.feature-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ===================================
+   VISION & MISSION - Clean Layout
+   =================================== */
+
+.vision-mission-page {
+    background: #f8f9fa;
+}
+
+.vm-gradient {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.vm-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: var(--spacing-lg);
+    padding: var(--spacing-md);
+}
+
+.vision-section,
+.mission-section {
+    background: var(--white);
+    padding: var(--spacing-lg);
+    border-radius: 6px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid var(--primary-blue);
+}
+
+.vm-title {
+    color: var(--primary-blue);
+    font-size: 2rem;
+    margin-bottom: var(--spacing-md);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.vm-text {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: var(--text-dark);
+}
+
+/* ===================================
+   PRODUCT PAGES - Clean & Clear
+   =================================== */
+
+.product-page {
+    background-color: var(--white);
+}
+
+.product-title-bar {
+    background: var(--primary-blue);
+    color: var(--white);
+    padding: var(--spacing-md) var(--spacing-lg);
+    text-align: center;
+    border-radius: 6px;
+    margin-bottom: var(--spacing-lg);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.product-title-bar h1 {
+    color: var(--white);
+    font-size: 2rem;
+    margin-bottom: var(--spacing-xs);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.product-description {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: var(--text-dark);
+    margin-bottom: var(--spacing-lg);
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.key-offerings h2 {
+    color: var(--primary-blue);
+    font-size: 1.8rem;
+    margin-bottom: var(--spacing-md);
+    font-weight: 700;
+    border-bottom: 2px solid var(--accent-orange);
+    padding-bottom: var(--spacing-xs);
+}
+
+.offering-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: var(--spacing-sm);
+    padding: var(--spacing-md);
+    background: #f8f9fa;
+    border-radius: 4px;
+    border-left: 3px solid var(--accent-orange);
+    transition: all 0.2s ease;
+}
+
+.offering-item:hover {
+    background: #e9ecef;
+    border-left-width: 5px;
+}
+
+.arrow {
+    color: var(--accent-orange);
+    font-size: 1.3rem;
+    margin-right: var(--spacing-sm);
+    flex-shrink: 0;
+}
+
+.offering-text {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--text-dark);
+}
+
+.product-image-container {
+    margin-top: var(--spacing-lg);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    border: 3px solid var(--accent-orange);
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ===================================
+   WHY CHOOSE US - Feature Grid
+   =================================== */
+
+.why-choose-page {
+    background: #f8f9fa;
+}
+
+.section-title-centered {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-blue);
+    margin-bottom: var(--spacing-xl);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.features-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.feature-box {
+    background: var(--white);
+    padding: var(--spacing-lg);
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 4px solid var(--accent-orange);
+}
+
+.feature-box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.feature-box.red,
+.feature-box.orange,
+.feature-box.purple,
+.feature-box.teal {
+    background: var(--white);
+    color: var(--text-dark);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--accent-orange);
+}
+
+.feature-box h2 {
+    color: var(--primary-blue);
+    font-size: 1.4rem;
+    margin-bottom: var(--spacing-sm);
+    font-weight: 700;
+}
+
+.feature-box p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-dark);
+}
+
+/* ===================================
+   FABRICATION SETUP
+   =================================== */
+
+.fabrication-page {
+    background-color: var(--white);
+}
+
+.fab-section {
+    margin-bottom: var(--spacing-xl);
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fab-title-bar {
+    background: var(--primary-blue);
+    color: var(--white);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-radius: 6px;
+    margin-bottom: var(--spacing-md);
+    display: inline-block;
+}
+
+.fab-title-bar h1 {
+    color: var(--white);
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.fab-image-container {
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    border: 1px solid var(--border-color);
+}
+
+.fab-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ===================================
+   PRODUCTS LIST - Clean Grid
+   =================================== */
+
+.products-list-page {
+    background: #f8f9fa;
+}
+
+.products-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--spacing-sm);
+}
+
+.product-item {
+    padding: var(--spacing-md);
+    background: var(--white);
+    border-left: 4px solid var(--accent-orange);
+    font-size: 1.05rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: all 0.2s ease;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.product-item:hover {
+    background: #e9ecef;
+    transform: translateX(3px);
+    border-left-width: 6px;
+}
+
+.product-item.highlight {
+    background: #fff3e0;
+    border-left-color: var(--primary-blue);
+    font-weight: 600;
+}
+
+/* ===================================
+   CONTACT PAGE - Professional
+   =================================== */
+
+.contact-page {
+    padding: 0;
+}
+
+.contact-gradient {
+    background: var(--primary-blue);
+    min-height: 100vh;
+    padding: var(--spacing-xl) var(--spacing-md);
+    color: var(--white);
+}
+
+.contact-title {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: var(--spacing-xl);
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+.contact-content {
+    max-width: 1200px;
+    margin: 0 auto var(--spacing-xl) auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+}
+
+.contact-map h2 {
+    font-size: 1.8rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--white);
+}
+
+.map-placeholder {
+    background: rgba(255,255,255,0.1);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.contact-info-box {
+    background: rgba(255,255,255,0.15);
+    padding: var(--spacing-lg);
+    border-radius: 6px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.contact-info-box h3 {
+    font-size: 1.4rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--accent-orange);
+    font-weight: 700;
+}
+
+.contact-info-box p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.footer-logo {
+    text-align: center;
+    margin-top: var(--spacing-xl);
+    padding-top: var(--spacing-lg);
+    border-top: 2px solid rgba(255,255,255,0.3);
+}
+
+.footer-logo h2 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    margin-bottom: var(--spacing-sm);
+    color: var(--white);
+}
+
+.footer-tagline {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* ===================================
+   NAVIGATION MENU - Clean
+   =================================== */
+
+.menu-button {
+    position: fixed;
+    top: var(--spacing-md);
+    right: var(--spacing-md);
+    z-index: 1000;
+    background: var(--primary-blue);
+    color: var(--white);
+    border: none;
+    padding: 0.8rem 1.1rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+    border-radius: 6px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.menu-button:hover {
+    background: var(--secondary-blue);
+    transform: scale(1.05);
+}
+
+.nav-menu {
+    position: fixed;
+    top: 0;
+    right: -350px;
+    width: 320px;
+    height: 100vh;
+    background: var(--white);
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    transition: right 0.3s ease;
+    overflow-y: auto;
+}
+
+.nav-menu.active {
+    right: 0;
+}
+
+.nav-header {
+    background: var(--primary-blue);
+    color: var(--white);
+    padding: var(--spacing-lg);
+    text-align: center;
+}
+
+.nav-header h2 {
+    color: var(--white);
+    font-size: 1.2rem;
+    margin: 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    list-style: none;
+    padding: var(--spacing-md) 0;
+}
+
+.nav-links li {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.nav-links a {
+    display: block;
+    padding: 1rem var(--spacing-md);
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
+}
+
+.nav-links a:hover {
+    background: #f8f9fa;
+    border-left-color: var(--accent-orange);
+    padding-left: calc(var(--spacing-md) + 8px);
+    color: var(--primary-blue);
+}
+
+/* Progress Bar */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: var(--accent-orange);
+    z-index: 1001;
+    transition: width 0.1s ease;
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+   =================================== */
+
+@media (max-width: 1024px) {
+    .gallery-item.large {
+        grid-column: span 1;
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --spacing-xl: 2.5rem;
+        --spacing-lg: 2rem;
+    }
+
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.75rem; }
+    h3 { font-size: 1.4rem; }
+
+    .company-name {
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+    }
+
+    .company-name .and {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .cover-images {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-md);
+    }
+
+    .cover-image-item {
+        width: 280px;
+        height: 280px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    .vm-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    .features-container {
+        grid-template-columns: 1fr;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-menu {
+        width: 100%;
+        right: -100%;
+    }
+
+    section {
+        padding: var(--spacing-lg) var(--spacing-sm);
+    }
+}
+
+@media (max-width: 480px) {
+    .company-name {
+        font-size: 2rem;
+    }
+
+    .contact-title {
+        font-size: 2rem;
+    }
+
+    .cover-image-item {
+        width: 90%;
+        max-width: 300px;
+        height: auto;
+        aspect-ratio: 1;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        padding: var(--spacing-sm);
+    }
+
+    .cover-page,
+    .image-gallery-page {
+        padding: var(--spacing-md) var(--spacing-sm);
+    }
+}
+
+/* ===================================
+   PRINT STYLES
+   =================================== */
+
+@media print {
+    .menu-button,
+    .nav-menu,
+    .scroll-progress {
+        display: none !important;
+    }
+
+    section {
+        page-break-after: always;
+        min-height: auto;
+    }
+
+    .gallery-item:hover,
+    .feature-box:hover,
+    .product-item:hover {
+        transform: none;
+    }
+
+    body {
+        background: white;
+    }
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
