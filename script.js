@@ -33,41 +33,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // ===================================
-    // Contact Form Handling
+    // Contact Form Handling (Formspree)
     // ===================================
-    const contactForm = document.getElementById('contactForm');
-    
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(contactForm);
-            const data = Object.fromEntries(formData);
-            
-            // In production, send to backend API
-            // For now, show success message
-            alert('Thank you for your inquiry! We will contact you within 24 hours.\n\nName: ' + data.name + '\nEmail: ' + data.email);
-            
-            // Reset form
-            contactForm.reset();
-            
-            // In production, replace with actual API call:
-            // fetch('/api/contact', {
-            //     method: 'POST',
-            //     headers: { 'Content-Type': 'application/json' },
-            //     body: JSON.stringify(data)
-            // })
-            // .then(response => response.json())
-            // .then(data => {
-            //     alert('Message sent successfully!');
-            //     contactForm.reset();
-            // })
-            // .catch(error => {
-            //     alert('Error sending message. Please try again.');
-            // });
-        });
-    }
+    // Form submission is handled by Formspree
+    // No need to prevent default submission
     
     // ===================================
     // Smooth Scroll for Anchor Links

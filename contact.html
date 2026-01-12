@@ -37,7 +37,7 @@
             <div class="contact-layout">
                 <div class="contact-form-container">
                     <h2>Send Us a Message</h2>
-                    <form class="contact-form" id="contactForm">
+                    <form class="contact-form" id="contactForm" action="https://formspree.io/f/xeoqqelo" method="POST">
                         <div class="form-group">
                             <label for="name">Full Name *</label>
                             <input type="text" id="name" name="name" required>
@@ -76,6 +76,9 @@
                             <label for="message">Project Details / Message *</label>
                             <textarea id="message" name="message" rows="6" required></textarea>
                         </div>
+
+                        <input type="hidden" name="_subject" value="New inquiry from Shri Engineering & Steel website">
+                        <input type="hidden" name="_replyto" value="sales@shriengineeringandsteel.com">
 
                         <button type="submit" class="btn btn-primary-large">Submit Inquiry</button>
                         <p class="form-note">* Required fields. We'll respond within 24 hours.</p>
